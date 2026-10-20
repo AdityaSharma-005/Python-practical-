@@ -27,7 +27,9 @@ Program
 Question: Write a program to accept a number 'n' and
 
 a. Check if 'n' is prime
+
 b. Generate all prime numbers till 'n'
+
 c. Generate first 'n' prime numbers
 This program may be done using functions.
 
@@ -60,7 +62,9 @@ Output
 Question: Write a program that accepts a character and performs the following:
 
 a. print whether the character is a letter or numeric digit or a special character.
+
 b. if the character is a letter, print whether the letter is uppercase or lowercase
+
 c. if the character is a numeric digit, prints its name in text (e.g., if input is 9, output is NINE)
 Concepts used: isalpha(), isupper(), isdigit(), dictionary lookup
 
@@ -77,9 +81,13 @@ Output
 Question: Write a program to perform the following operations on a string
 
 a. Find the frequency of a character in a string.
+
 b. Replace a character by another character in a string.
+
 c. Remove the first occurrence of a character from a string.
+
 d. Remove all occurrences of a character from a string.
+
 Concepts used: string traversal, find(), slicing, functions
 
 Program
@@ -121,7 +129,9 @@ Output
 Question: Write a program to create a list of the cubes of only the even integers appearing in the input list (may have elements of other types also) using the following:
 
 a. 'for' loop
+
 b. list comprehension
+
 Concepts used: isinstance(), for loop, list comprehension (bool is excluded on purpose, because True is an int in Python)
 
 Program
@@ -137,8 +147,11 @@ Output
 Question: Write a program to read a file and
 
 a. Print the total number of characters, words and lines in the file.
+
 b. Calculate the frequency of each character in the file. Use a variable of dictionary type to maintain the count.
+
 c. Print the words in reverse order.
+
 d. Copy even lines of the file to a file named 'File1' and odd lines to another file named 'File2'.
 Concepts used: open() with with, readlines(), dictionary counting, split(), enumerate()
 
@@ -170,8 +183,11 @@ Output
 Question: Consider a tuple t1=(1, 2, 5, 7, 9, 2, 4, 6, 8, 10). Write a program to perform following operations:
 
 a. Print half the values of the tuple in one line and the other half in the next line.
+
 b. Print another tuple whose values are even numbers in the given tuple.
+
 c. Concatenate a tuple t2=(11,13,15) with t1.
+
 d. Return maximum and minimum value from this tuple
 
 Concepts used: tuple slicing, tuple() with a generator, concatenation (+), max() / min()
@@ -189,11 +205,17 @@ Output
 Question: Define a class Employee that stores information about employees in the company. The class should contain the following:
 
 (i) data members: count (to keep a record of all the objects being created for this class) and for every employee: an employee number, Name, Dept, Basic, DA and HRA.
+
 (ii) function members:
+
 a. __init__ method to initialize and/or update the members. Add statements to ensure that the program is terminated if any of Basic, DA and HRA is set to a negative value.
+
 b. function salary, that returns salary as the sum of Basic, DA and HRA.
+
 c. __del__ function to decrease the number of objects created for the class.
+
 d. __str__ function to display the details of an employee along with the salary of an employee in a proper format.
+
 Concepts used: class attribute (count), __init__, __del__, __str__, sys.exit()
 
 Program

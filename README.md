@@ -1,12 +1,9 @@
 ### Object Oriented Programming using Python
 
 
-
-|Field|	|Details|
-|Name|	|Shivam Pal|
-|Roll Number|	|26570005|
-|Programme|	|B.Sc. (Hons.) Computer Science|
-|Semester|	|I|
-|College|	|Ramanujan College|
-|University|	|University of Delhi|
-|Tool|  |Language	Python 3|
+| Name     | Aditya Sharma 
+| -------- | :------: 
+| RollNo.  | 26570005   
+| Dept.    | BSC (H) Computer Science
+| Semester | 1  
+|Tool      | Python 3

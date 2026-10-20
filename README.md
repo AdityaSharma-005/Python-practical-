@@ -111,9 +111,11 @@ Concepts used: str.find(sub, start), lists, return values
 
 Program 
 
+<img width="1468" height="423" alt="image" src="https://github.com/user-attachments/assets/940e5898-9f7d-42c4-9b69-d91ee01bdf08" />
 
 Output
 
+<img width="772" height="152" alt="image" src="https://github.com/user-attachments/assets/d8c02785-d1b4-4e8f-b935-d69ef330c2f3" />
 
 ## Practical 8: Cubes of Even Integers
 Question: Write a program to create a list of the cubes of only the even integers appearing in the input list (may have elements of other types also) using the following:
@@ -284,3 +286,172 @@ Concepts used: classes, objects, __str__, math.sqrt()
 
 Program 
 
+```python
+# Practical 13: Define a class "2DPoint" with coordinates x and y as attributes. Create relevant
+# methods and print the objects. Also define a method distance to calculate the distance between
+# any two point objects.
+# Note: a Python class name cannot start with a digit, so the class is called Point2D.
+import math
+
+
+class Point2D:
+    def __init__(self, x=0, y=0):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return f"Point2D({self.x}, {self.y})"
+
+    def distance(self, other):
+        """Distance between this point and another point."""
+        return math.sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)
+
+    def move(self, dx, dy):
+        """Shift the point by (dx, dy)."""
+        self.x += dx
+        self.y += dy
+
+    def midpoint(self, other):
+        return Point2D((self.x + other.x) / 2, (self.y + other.y) / 2)
+
+
+if __name__ == "__main__":
+    p1 = Point2D(1, 2)
+    p2 = Point2D(4, 6)
+    print("p1 =", p1)
+    print("p2 =", p2)
+    print("Distance between p1 and p2 =", p1.distance(p2))
+    print("Midpoint of p1 and p2 =", p1.midpoint(p2))
+
+    p1.move(2, 3)
+    print("After moving p1 by (2, 3): p1 =", p1)
+
+    # Points entered by the user
+    x1, y1 = map(float, input("\nEnter x and y of the first point: ").split())
+    x2, y2 = map(float, input("Enter x and y of the second point: ").split())
+    a, b = Point2D(x1, y1), Point2D(x2, y2)
+    print(a, "and", b)
+    print("Distance =", round(a.distance(b), 4))
+```
+
+Output
+
+<img width="721" height="192" alt="image" src="https://github.com/user-attachments/assets/363487e3-3e2f-4e15-a6a4-a3cb6e56f550" />
+
+## Practical 14: Class 3DPoint (Inheritance)
+
+Question: Inherit the above class to create a "3Dpoint" with additional attribute z. Override the method defined in "2DPoint" class, to calculate distance between two points of the "3DPoint" class.
+
+The class is named Point3D. It imports Point2D from practical_13_point2d.py, so keep both files in the same folder.
+
+Concepts used: inheritance, super(), method overriding, isinstance()
+
+Program 
+
+```python
+# Practical 14: Inherit the above class to create a "3DPoint" with an additional attribute z.
+# Override the method defined in "2DPoint" to calculate the distance between two points of the
+# "3DPoint" class.
+# Note: class names cannot start with a digit, so the classes are Point2D and Point3D.
+# Keep practical_13_point2d.py in the same folder as this file.
+import math
+from practical_13_point2d import Point2D
+
+
+class Point3D(Point2D):
+    def __init__(self, x=0, y=0, z=0):
+        super().__init__(x, y)                  # x and y are set by the parent class
+        self.z = z
+
+    def __str__(self):
+        return f"Point3D({self.x}, {self.y}, {self.z})"
+
+    def distance(self, other):
+        """Overridden: distance in 3-D space."""
+        return math.sqrt((self.x - other.x) ** 2 +
+                         (self.y - other.y) ** 2 +
+                         (self.z - getattr(other, "z", 0)) ** 2)
+
+    def move(self, dx, dy, dz):
+        """Overridden: shift the point by (dx, dy, dz)."""
+        super().move(dx, dy)
+        self.z += dz
+
+
+if __name__ == "__main__":
+    p1 = Point3D(1, 2, 3)
+    p2 = Point3D(4, 6, 15)
+    print("p1 =", p1)
+    print("p2 =", p2)
+    print("Distance between p1 and p2 =", p1.distance(p2))
+
+    p1.move(1, 1, 1)
+    print("After moving p1 by (1, 1, 1): p1 =", p1)
+
+    # The parent class is still available and unchanged
+    q1, q2 = Point2D(0, 0), Point2D(3, 4)
+    print("2D distance:", q1.distance(q2))
+    print("Point3D is a Point2D:", isinstance(p1, Point2D))
+
+    # Points entered by the user
+    x1, y1, z1 = map(float, input("\nEnter x, y and z of the first point: ").split())
+    x2, y2, z2 = map(float, input("Enter x, y and z of the second point: ").split())
+    a, b = Point3D(x1, y1, z1), Point3D(x2, y2, z2)
+    print(a, "and", b)
+    print("Distance =", round(a.distance(b), 4))
+```
+
+Output
+
+<img width="726" height="222" alt="image" src="https://github.com/user-attachments/assets/2c4d4e5c-0428-4ec1-b639-890870726099" />
+
+## Practical 15: Exception Handling
+
+Question: Write a program to accept a name from a user. Raise and handle appropriate exception(s) if the text entered by the user contains digits and/or special characters.
+
+Concepts used: custom exception class, raise, try / except / else / finally
+
+Program 
+
+```python
+# Practical 15: WAP to accept a name from a user. Raise and handle appropriate
+# exception(s) if the text entered by the user contains digits and/or special characters.
+
+
+class InvalidNameError(Exception):
+    """Raised when the name has digits or special characters."""
+    pass
+
+
+def validate_name(name):
+    if name.strip() == "":
+        raise ValueError("Name cannot be empty.")
+    has_digit = any(ch.isdigit() for ch in name)
+    has_special = any(not (ch.isalpha() or ch.isspace()) and not ch.isdigit() for ch in name)
+    if has_digit and has_special:
+        raise InvalidNameError("Name contains digits and special characters.")
+    if has_digit:
+        raise InvalidNameError("Name contains digits.")
+    if has_special:
+        raise InvalidNameError("Name contains special characters.")
+    return name
+
+
+while True:
+    user_name = input("Enter your name: ")
+    try:
+        validate_name(user_name)
+    except InvalidNameError as e:
+        print("Invalid name ->", e, "Please try again.\n")
+    except ValueError as e:
+        print("Error ->", e, "Please try again.\n")
+    else:
+        print("Hello,", user_name.strip() + "! Your name is valid.")
+        break
+    finally:
+        print("(validation finished)")
+```
+
+Output
+
+<img width="818" height="217" alt="image" src="https://github.com/user-attachments/assets/142da55b-29f9-47dc-9915-8b44e35db099" />

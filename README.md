@@ -206,7 +206,7 @@ else:
 
 Output
 
-<img width="782" height="233" alt="image" src="https://github.com/user-attachments/assets/342d9944-8e0b-42ca-ae97-3bd737d355e6" />
+<img width="678" height="171" alt="image" src="https://github.com/user-attachments/assets/f0fafa94-882f-45bc-9d40-08b01e63f3c1" />
 
 ## Practical 5: Operations on a String
 
@@ -281,7 +281,7 @@ print("   Result:", remove_all(text, ch))
 
 Output
 
-<img width="767" height="232" alt="image" src="https://github.com/user-attachments/assets/b91383d2-1f7e-475b-8522-0e25a0151616" />
+<img width="678" height="297" alt="image" src="https://github.com/user-attachments/assets/d57f5b70-14b1-4c52-b2a1-1776d38d1928" />
 
 ## Practical 6: Swap the First n Characters of Two Strings
 Question: Write a program to swap the first n characters of two strings.
@@ -314,7 +314,8 @@ else:
 
 Output
 
-<img width="771" height="147" alt="image" src="https://github.com/user-attachments/assets/3b8314a2-0e82-408d-8b46-414a5ea29065" />
+<img width="687" height="350" alt="image" src="https://github.com/user-attachments/assets/ebcb1c9e-2878-429a-b45b-2c0d5e33beef" />
+
 
 ## Practical 7: Indices of a Substring
 
@@ -351,7 +352,8 @@ else:
 
 Output
 
-<img width="772" height="152" alt="image" src="https://github.com/user-attachments/assets/d8c02785-d1b4-4e8f-b935-d69ef330c2f3" />
+<img width="687" height="213" alt="image" src="https://github.com/user-attachments/assets/5df3bece-21f9-45eb-adbb-79059c922bd4" />
+
 
 ## Practical 8: Cubes of Even Integers
 Question: Write a program to create a list of the cubes of only the even integers appearing in the input list (may have elements of other types also) using the following:
@@ -473,7 +475,8 @@ print("\nd) Even lines copied to 'File1' and odd lines copied to 'File2'.")
 
 Output
 
-<img width="842" height="440" alt="image" src="https://github.com/user-attachments/assets/a0ef5025-4f66-483d-837e-05e0e3d18576" />
+<img width="1535" height="703" alt="image" src="https://github.com/user-attachments/assets/7b6ea308-3569-4b0a-9d77-c270b5529bda" />
+
 
 ## Practical 10: Dictionary of Cubes
 
@@ -657,7 +660,8 @@ print("This line is never reached.")
 
 Output
 
-<img width="838" height="435" alt="image" src="https://github.com/user-attachments/assets/bfdbdf30-65f5-42e8-9ed0-96210b0d814a" />
+<img width="1535" height="733" alt="image" src="https://github.com/user-attachments/assets/77ab81de-cff8-4ed9-b08d-2c32542f4a0a" />
+
 
 ## Practical 13: Class 2DPoint
 
@@ -719,7 +723,8 @@ if __name__ == "__main__":
 
 Output
 
-<img width="721" height="192" alt="image" src="https://github.com/user-attachments/assets/363487e3-3e2f-4e15-a6a4-a3cb6e56f550" />
+<img width="693" height="300" alt="image" src="https://github.com/user-attachments/assets/f136bb47-1c3d-4196-b9b3-dfcb5c144fe0" />
+
 
 ## Practical 14: Class 3DPoint (Inheritance)
 
@@ -786,7 +791,8 @@ if __name__ == "__main__":
 
 Output
 
-<img width="726" height="222" alt="image" src="https://github.com/user-attachments/assets/2c4d4e5c-0428-4ec1-b639-890870726099" />
+<img width="687" height="392" alt="image" src="https://github.com/user-attachments/assets/456cc172-5fb6-4289-9d4f-4e63b1f99090" />
+
 
 ## Practical 15: Exception Handling
 
@@ -837,4 +843,5 @@ while True:
 
 Output
 
-<img width="818" height="217" alt="image" src="https://github.com/user-attachments/assets/142da55b-29f9-47dc-9915-8b44e35db099" />
+<img width="690" height="346" alt="image" src="https://github.com/user-attachments/assets/73f48461-efc4-4497-98f4-0d1f3c878945" />
+

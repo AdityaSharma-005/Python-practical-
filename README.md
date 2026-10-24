@@ -123,7 +123,8 @@ print(f"c) First {n} prime numbers:", first_n_primes(n))
 
 Output
 
-<img width="751" height="161" alt="image" src="https://github.com/user-attachments/assets/3d71e108-47bc-48a4-baf6-d5670ce626c2" />
+<img width="648" height="165" alt="Screenshot 2026-10-23 193603" src="https://github.com/user-attachments/assets/a026de0a-bc65-43af-a74a-e40a2626ca53" />
+
 
 ##  Practical 3: Pyramid and Reverse Pyramid
 

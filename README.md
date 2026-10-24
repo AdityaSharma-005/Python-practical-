@@ -634,7 +634,7 @@ class Employee:
                 f"Salary      : Rs. {self.salary():,.2f}")
 
 
-e1 = Employee(101, "Shivam Pal", "Computer Science", 30000, 12000, 8000)
+e1 = Employee(101, "Aditya Sharma", "Computer Science", 30000, 12000, 8000)
 e2 = Employee(102, "Aman Verma", "Mathematics", 28000, 11000, 7500)
 e3 = Employee(103, "Neha Singh", "Physics", 32000, 12500, 8500)
 
